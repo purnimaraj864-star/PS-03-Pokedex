@@ -74,5 +74,5 @@ The app runs at  http://localhost:5175
 
 ## Author
 
-SAPNA SINGH
+PURNIMA RAJ
 # pokedex
