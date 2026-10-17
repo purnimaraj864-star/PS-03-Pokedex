@@ -49,30 +49,28 @@ Home Page
 
 Pokemon List Page
 
-![Pokemon List Page](PokemonList.png)
+![Pokemon List Page](pokemonList.png)
 
 Pokemon Details Page
 
-![Pokemon Details Page](pokemonDetails.png)
+![Pokemon Details Page](pokemondetails.png)
 
-Page Not Found
 
-![Page Not Found](page-not-found.png)
 
 ## Live Demo
 
-https://ps-03-pokedex-web.vercel.app/
+
 
 ## Installation and Setup
 
 ```bash
-git clone https://github.com/sapnasingh4852-source/PS3-Pokedex.git
+git 
 cd PS3-Pokedex
 npm install
 npm run dev
 ```
 
-The app runs at http://localhost:5173
+The app runs at  http://localhost:5175
 
 ## Author
 
