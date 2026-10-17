@@ -1,25 +1,40 @@
-/* Navbar */
 
+
+/* Global Dark Theme */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #0b1120;
+  color: #e2e8f0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar */
 nav {
   display: flex;
   gap: 1.5rem;
   padding: 1rem 2rem;
-  background-color: #dc0a2d;
+  background-color: #080d1a;
+  border-bottom: 1px solid #233454;
 }
 
 nav a {
-  color: #fff;
+  color: #e2e8f0;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
+  color: #60a5fa;
   text-decoration: underline;
 }
 
-/* Home page */
-
+/* Home Page */
 .hero {
   min-height: calc(100vh - 60px);
   display: flex;
@@ -28,38 +43,40 @@ nav a:hover {
   align-items: center;
   text-align: center;
   padding: 2rem;
-  background: linear-gradient(180deg, #fff 0%, #ffe3e8 100%);
+  background: linear-gradient(180deg, #0b1120 0%, #142440 100%);
 }
 
 .hero h1 {
   font-size: 3.5rem;
-  color: #dc0a2d;
+  color: #60a5fa;
   margin-bottom: 1rem;
 }
 
 .hero p {
   max-width: 500px;
   font-size: 1.1rem;
-  color: #555;
+  line-height: 1.7;
+  color: #b0bfd4;
   margin-bottom: 2rem;
 }
 
 .hero-button {
-  background-color: #dc0a2d;
-  color: #fff;
+  background-color: #2563eb;
+  color: #ffffff;
   padding: 0.8rem 2rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .hero-button:hover {
-  background-color: #b30a26;
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
 }
 
-/* Pokemon list page */
-
+/* Pokemon List Page */
 .pokemon-page {
   max-width: 1100px;
   margin: 0 auto;
@@ -68,7 +85,7 @@ nav a:hover {
 
 .pokemon-page h1 {
   text-align: center;
-  color: #dc0a2d;
+  color: #60a5fa;
   margin-bottom: 1.5rem;
 }
 
@@ -79,14 +96,27 @@ nav a:hover {
   max-width: 400px;
   padding: 0.7rem 1rem;
   font-size: 1rem;
-  border: 2px solid #dc0a2d;
+  color: #e2e8f0;
+  background-color: #111c30;
+  border: 2px solid #2b4266;
   border-radius: 8px;
   outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-box::placeholder {
+  color: #8495af;
+}
+
+.search-box:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.15);
 }
 
 .loading {
   text-align: center;
   font-size: 1.2rem;
+  color: #93c5fd;
   margin-top: 3rem;
 }
 
@@ -97,16 +127,20 @@ nav a:hover {
 }
 
 .pokemon-card {
-  background-color: #fff;
+  background-color: #111c30;
+  border: 1px solid #243653;
   border-radius: 12px;
   padding: 1.2rem;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-  transition: transform 0.15s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .pokemon-card:hover {
   transform: translateY(-5px);
+  border-color: #3b82f6;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.15);
 }
 
 .pokemon-card img {
@@ -116,24 +150,30 @@ nav a:hover {
 }
 
 .pokemon-card h3 {
+  color: #e2e8f0;
   text-transform: capitalize;
   margin-top: 0.5rem;
 }
 
 .pokemon-card p {
-  color: #888;
+  color: #94a3b8;
   margin-top: 0.25rem;
 }
 
 .pokemon-card a {
   display: inline-block;
   margin-top: 0.75rem;
-  color: #dc0a2d;
+  color: #60a5fa;
   font-weight: 600;
+  text-decoration: none;
 }
 
-/* Pokemon details page */
+.pokemon-card a:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
 
+/* Pokemon Details Page */
 .details-page {
   max-width: 600px;
   margin: 0 auto;
@@ -145,10 +185,11 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background-color: #fff;
+  background-color: #111c30;
+  border: 1px solid #243653;
   border-radius: 16px;
   padding: 2.5rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 .details-image {
@@ -159,14 +200,14 @@ nav a:hover {
 
 .details-card h1 {
   text-transform: capitalize;
-  color: #dc0a2d;
+  color: #60a5fa;
   margin-top: 1rem;
 }
 
 .type-badge {
   display: inline-block;
-  color: #fff;
-  background-color: #dc0a2d;
+  color: #ffffff;
+  background-color: #1d4ed8;
   padding: 0.3rem 0.9rem;
   border-radius: 20px;
   font-size: 0.9rem;
@@ -176,6 +217,7 @@ nav a:hover {
 }
 
 .details-card h3 {
+  color: #cbd5e1;
   margin-top: 1.5rem;
 }
 
@@ -187,49 +229,11 @@ nav a:hover {
 .stat p {
   margin: 0.3rem 0;
   font-size: 0.95rem;
-  color: #555;
+  color: #cbd5e1;
   text-transform: capitalize;
 }
 
 .stat-bar {
   height: 10px;
   width: 100%;
-  background-color: #eee;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.stat-bar-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #dc0a2d, #ff7a59);
-  border-radius: 5px;
-}
-
-.details-card a {
-  display: inline-block;
-  margin-top: 1.5rem;
-  color: #dc0a2d;
-  font-weight: 600;
-}
-
-/* Not found page */
-
-.not-found {
-  min-height: calc(100vh - 60px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.not-found h1 {
-  font-size: 2.5rem;
-  color: #dc0a2d;
-  margin-bottom: 1rem;
-}
-
-.not-found a {
-  color: #222;
-  font-weight: 600;
-}
+  background-color: #253}
