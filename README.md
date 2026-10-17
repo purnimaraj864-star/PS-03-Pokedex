@@ -58,7 +58,7 @@ Pokemon Details Page
 
 
 ## Live Demo
-
+https://ps-03-pokedex.vercel.app/
 
 
 ## Installation and Setup
