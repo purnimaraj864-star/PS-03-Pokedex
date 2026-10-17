@@ -49,7 +49,7 @@ Home Page
 
 Pokemon List Page
 
-![Pokemon List Page](pokemonList.png)
+![Pokemon List Page](pokemonlist.png)
 
 Pokemon Details Page
 
